@@ -18,6 +18,13 @@ public class Screen extends javax.swing.JFrame {
      */
     public Screen() {
         initComponents();
+         this.PopupApple.setVisible(false);
+         this.ListScreen.setVisible(false);
+         this.AddScreen.setVisible(false);
+         this.Notifications.setVisible(false);
+         this.GroupScreen.setVisible(false);
+         this.PurchaseScreen.setVisible(false);
+         this.HomeScreen.setVisible(true);
     }
 
     /**
@@ -28,7 +35,6 @@ public class Screen extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -45,10 +51,24 @@ public class Screen extends javax.swing.JFrame {
         HeaderLabel = new javax.swing.JLabel();
         BodyPart = new javax.swing.JPanel();
         AddScreen = new javax.swing.JPanel();
+        PopupApple = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jPanel35 = new javax.swing.JPanel();
+        jLabel59 = new javax.swing.JLabel();
+        ExitProfile1 = new javax.swing.JButton();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jSpinner1 = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
+        jPanel34 = new javax.swing.JPanel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
         Notification9 = new javax.swing.JButton();
         Notification10 = new javax.swing.JButton();
         Notification11 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jPanel29 = new javax.swing.JPanel();
         jPanel30 = new javax.swing.JPanel();
@@ -70,10 +90,6 @@ public class Screen extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel9 = new javax.swing.JPanel();
-        jPanel26 = new javax.swing.JPanel();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jLabel37 = new javax.swing.JLabel();
-        Notification2 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jLabel36 = new javax.swing.JLabel();
@@ -82,10 +98,6 @@ public class Screen extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jLabel38 = new javax.swing.JLabel();
         Notification3 = new javax.swing.JButton();
-        jPanel28 = new javax.swing.JPanel();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jLabel39 = new javax.swing.JLabel();
-        Notification4 = new javax.swing.JButton();
         GroupScreen = new javax.swing.JPanel();
         PopupJess = new javax.swing.JPanel();
         jLabel44 = new javax.swing.JLabel();
@@ -328,6 +340,93 @@ public class Screen extends javax.swing.JFrame {
         AddScreen.setBackground(new java.awt.Color(255, 255, 255));
         AddScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        PopupApple.setBackground(new java.awt.Color(204, 204, 204));
+        PopupApple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-apple_filled.png"))); // NOI18N
+        PopupApple.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 100, 100));
+
+        jLabel58.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("How many?");
+        PopupApple.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 50));
+
+        jPanel35.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel59.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setText("Add");
+        jPanel35.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 50));
+
+        ExitProfile1.setBackground(new java.awt.Color(255, 102, 102));
+        ExitProfile1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        ExitProfile1.setForeground(new java.awt.Color(255, 255, 255));
+        ExitProfile1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
+        ExitProfile1.setBorderPainted(false);
+        ExitProfile1.setContentAreaFilled(false);
+        ExitProfile1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitProfile1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ExitProfile1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ExitProfile1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProfile1ActionPerformed(evt);
+            }
+        });
+        jPanel35.add(ExitProfile1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
+
+        PopupApple.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
+
+        jLabel60.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel60.setText("Apples");
+        PopupApple.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel61.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jLabel61.setText("No one has requested this item yet");
+        PopupApple.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 220, 30));
+
+        jSeparator15.setBackground(new java.awt.Color(255, 255, 255));
+        PopupApple.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Count", "Dozen", "Box", "Cup", " ", " " }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        PopupApple.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 130, 30));
+        PopupApple.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, -1));
+
+        jButton1.setBackground(new java.awt.Color(0, 153, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Add to grocery list!");
+        jButton1.setBorderPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        PopupApple.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 320, 50));
+
+        AddScreen.add(PopupApple, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 360, 330));
+        PopupJess.setVisible(false);
+
+        jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel55.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("Select a category!");
+        jPanel34.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 280, 30));
+
+        jLabel56.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("Search or");
+        jPanel34.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 280, 30));
+
+        AddScreen.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 350));
+
         Notification9.setBackground(new java.awt.Color(255, 102, 102));
         Notification9.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification9.setForeground(new java.awt.Color(255, 255, 255));
@@ -373,25 +472,13 @@ public class Screen extends javax.swing.JFrame {
         });
         AddScreen.add(Notification11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 50, 50));
 
-        jButton5.setBackground(new java.awt.Color(255, 102, 255));
-        jButton5.setText("Select items to checkout!");
-        jButton5.setAutoscrolls(true);
-        jButton5.setEnabled(false);
-        jButton5.setFocusable(false);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        AddScreen.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 360, 50));
-
         jPanel29.setLayout(new javax.swing.BoxLayout(jPanel29, javax.swing.BoxLayout.Y_AXIS));
 
         jPanel30.setBackground(new java.awt.Color(255, 255, 255));
         jPanel30.setLayout(new java.awt.BorderLayout());
 
         jLabel45.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel45.setText("Pears, 12 singles");
+        jLabel45.setText("Apples");
         jPanel30.add(jLabel45, java.awt.BorderLayout.CENTER);
 
         Notification5.setBackground(new java.awt.Color(255, 102, 102));
@@ -416,7 +503,7 @@ public class Screen extends javax.swing.JFrame {
         jPanel31.setLayout(new java.awt.BorderLayout());
 
         jLabel51.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel51.setText("Pears, 12 singles");
+        jLabel51.setText("Pears");
         jPanel31.add(jLabel51, java.awt.BorderLayout.CENTER);
 
         Notification6.setBackground(new java.awt.Color(255, 102, 102));
@@ -441,7 +528,7 @@ public class Screen extends javax.swing.JFrame {
         jPanel32.setLayout(new java.awt.BorderLayout());
 
         jLabel53.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel53.setText("Pears, 12 singles");
+        jLabel53.setText("Bananas");
         jPanel32.add(jLabel53, java.awt.BorderLayout.CENTER);
 
         Notification7.setBackground(new java.awt.Color(255, 102, 102));
@@ -466,7 +553,7 @@ public class Screen extends javax.swing.JFrame {
         jPanel33.setLayout(new java.awt.BorderLayout());
 
         jLabel54.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel54.setText("Pears, 12 singles");
+        jLabel54.setText("Grapes");
         jPanel33.add(jLabel54, java.awt.BorderLayout.CENTER);
 
         Notification8.setBackground(new java.awt.Color(255, 102, 102));
@@ -489,7 +576,7 @@ public class Screen extends javax.swing.JFrame {
 
         jScrollPane5.setViewportView(jPanel29);
 
-        AddScreen.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 300));
+        AddScreen.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 350));
 
         jTextField1.setText("Search...");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -548,38 +635,6 @@ public class Screen extends javax.swing.JFrame {
         ListScreen.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 360, 50));
 
         jPanel9.setLayout(new javax.swing.BoxLayout(jPanel9, javax.swing.BoxLayout.Y_AXIS));
-
-        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel26.setLayout(new java.awt.BorderLayout());
-
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-        jPanel26.add(jCheckBox2, java.awt.BorderLayout.LINE_START);
-
-        jLabel37.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel37.setText("Pears, 12 singles");
-        jPanel26.add(jLabel37, java.awt.BorderLayout.CENTER);
-
-        Notification2.setBackground(new java.awt.Color(255, 102, 102));
-        Notification2.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        Notification2.setForeground(new java.awt.Color(255, 255, 255));
-        Notification2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
-        Notification2.setBorderPainted(false);
-        Notification2.setContentAreaFilled(false);
-        Notification2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Notification2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Notification2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Notification2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Notification2ActionPerformed(evt);
-            }
-        });
-        jPanel26.add(Notification2, java.awt.BorderLayout.LINE_END);
-
-        jPanel9.add(jPanel26);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -644,38 +699,6 @@ public class Screen extends javax.swing.JFrame {
         jPanel27.add(Notification3, java.awt.BorderLayout.LINE_END);
 
         jPanel9.add(jPanel27);
-
-        jPanel28.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel28.setLayout(new java.awt.BorderLayout());
-
-        jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox4ActionPerformed(evt);
-            }
-        });
-        jPanel28.add(jCheckBox4, java.awt.BorderLayout.LINE_START);
-
-        jLabel39.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel39.setText("Pears, 12 singles");
-        jPanel28.add(jLabel39, java.awt.BorderLayout.CENTER);
-
-        Notification4.setBackground(new java.awt.Color(255, 102, 102));
-        Notification4.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        Notification4.setForeground(new java.awt.Color(255, 255, 255));
-        Notification4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
-        Notification4.setBorderPainted(false);
-        Notification4.setContentAreaFilled(false);
-        Notification4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Notification4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        Notification4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        Notification4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Notification4ActionPerformed(evt);
-            }
-        });
-        jPanel28.add(Notification4, java.awt.BorderLayout.LINE_END);
-
-        jPanel9.add(jPanel28);
 
         jScrollPane1.setViewportView(jPanel9);
 
@@ -1160,6 +1183,7 @@ public class Screen extends javax.swing.JFrame {
         
         this.ListScreen.setVisible(true);
         this.HeaderLabel.setText("List");
+         this.BodyPart.repaint();
     }//GEN-LAST:event_ListButtonActionPerformed
 
     private void HomeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeButtonActionPerformed
@@ -1168,6 +1192,7 @@ public class Screen extends javax.swing.JFrame {
         }
        this.HomeScreen.setVisible(true);
        this.HeaderLabel.setText("Groshare");
+        this.BodyPart.repaint();
     }//GEN-LAST:event_HomeButtonActionPerformed
 
     private void PurchaseButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PurchaseButtonActionPerformed
@@ -1176,12 +1201,16 @@ public class Screen extends javax.swing.JFrame {
         }
        this.PurchaseScreen.setVisible(true);
        this.HeaderLabel.setText("Purchases");
+        this.BodyPart.repaint();
     }//GEN-LAST:event_PurchaseButtonActionPerformed
 
     private void GroupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GroupButtonActionPerformed
-       this.BodyPart.getComponent(0).setVisible(false);
+               for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
        this.GroupScreen.setVisible(true);
        this.HeaderLabel.setText("My Group");
+        this.BodyPart.repaint();
     }//GEN-LAST:event_GroupButtonActionPerformed
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
@@ -1190,6 +1219,9 @@ public class Screen extends javax.swing.JFrame {
         }
        this.AddScreen.setVisible(true);
        this.HeaderLabel.setText("Add to list");
+        this.jPanel34.setVisible(true);
+        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
     }//GEN-LAST:event_AddButtonActionPerformed
 
     private void NotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotificationActionPerformed
@@ -1198,6 +1230,7 @@ public class Screen extends javax.swing.JFrame {
         }
        this.Notifications.setVisible(true);
        this.HeaderLabel.setText("Notifications");
+        this.BodyPart.repaint();
     }//GEN-LAST:event_NotificationActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1217,43 +1250,24 @@ public class Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_JessProfileMouseClicked
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        // TODO add your handling code here:
+        this.jButton4.setEnabled(true);
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void Notification1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Notification1ActionPerformed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
-    private void Notification2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Notification2ActionPerformed
-
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
-        // TODO add your handling code here:
+         this.jPanel9.getComponents();
+        this.jButton4.setEnabled(true);
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void Notification3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Notification3ActionPerformed
 
-    private void jCheckBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox4ActionPerformed
-
-    private void Notification4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Notification4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void Notification5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification5ActionPerformed
-        // TODO add your handling code here:
+        this.PopupApple.setVisible(true);
     }//GEN-LAST:event_Notification5ActionPerformed
 
     private void Notification6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification6ActionPerformed
@@ -1269,7 +1283,7 @@ public class Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_Notification8ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+        this.jPanel34.setVisible(false);
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void Notification10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification10ActionPerformed
@@ -1277,7 +1291,36 @@ public class Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_Notification10ActionPerformed
 
     private void Notification11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification11ActionPerformed
-        // TODO add your handling code here:
+//        javax.swing.JPanel jPanelTest;
+//        jPanelTest = new javax.swing.JPanel();
+//        
+//        javax.swing.JLabel jLabelTest = new javax.swing.JLabel();
+//        javax.swing.JButton NotificationTest = new javax.swing.JButton();
+//        
+//        jPanelTest.setBackground(new java.awt.Color(255, 255, 255));
+//        jPanelTest.setLayout(new java.awt.BorderLayout());
+//
+//        jLabelTest.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+//        jLabelTest.setText("Pears");
+//        jPanelTest.add(jLabelTest, java.awt.BorderLayout.CENTER);
+//
+//        NotificationTest.setBackground(new java.awt.Color(255, 102, 102));
+//        NotificationTest.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+//        NotificationTest.setForeground(new java.awt.Color(255, 255, 255));
+//        NotificationTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
+//        NotificationTest.setBorderPainted(false);
+//        NotificationTest.setContentAreaFilled(false);
+//        NotificationTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//        NotificationTest.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+//        NotificationTest.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+//        
+//        jPanelTest.add(NotificationTest, java.awt.BorderLayout.LINE_END);
+//
+//        this.jPanel29.add(jPanelTest);
+//        this.jScrollPane5.validate();
+//
+//        this.jScrollPane5.repaint();
+           this.jPanel34.setVisible(false);
     }//GEN-LAST:event_Notification11ActionPerformed
 
     private void Notification9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification9ActionPerformed
@@ -1292,6 +1335,71 @@ public class Screen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Notification13ActionPerformed
 
+    private void ExitProfile1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile1ActionPerformed
+        this.PopupApple.setVisible(false);
+    }//GEN-LAST:event_ExitProfile1ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       this.PopupApple.setVisible(false);
+        for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+           this.BodyPart.getComponent(i).setVisible(false);
+        }
+        
+        javax.swing.JPanel jPanelTest;
+        jPanelTest = new javax.swing.JPanel();
+        
+        javax.swing.JLabel jLabelTest = new javax.swing.JLabel();
+        javax.swing.JButton NotificationTest = new javax.swing.JButton();
+        javax.swing.JCheckBox jCheckBoxTest = new javax.swing.JCheckBox();
+        
+        jPanelTest.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelTest.setLayout(new java.awt.BorderLayout());
+        
+        
+        jPanelTest.add(jCheckBoxTest, java.awt.BorderLayout.LINE_START);
+        jCheckBoxTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxTestActionPerformed(evt);
+            }
+        });
+
+        jLabelTest.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabelTest.setText("Apples, 12 count");
+        jPanelTest.add(jLabelTest, java.awt.BorderLayout.CENTER);
+
+        NotificationTest.setBackground(new java.awt.Color(255, 102, 102));
+        NotificationTest.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        NotificationTest.setForeground(new java.awt.Color(255, 255, 255));
+        NotificationTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
+        NotificationTest.setBorderPainted(false);
+        NotificationTest.setContentAreaFilled(false);
+        NotificationTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        NotificationTest.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        NotificationTest.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        NotificationTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                
+            }
+        });
+        jPanelTest.add(NotificationTest, java.awt.BorderLayout.LINE_END);
+
+        
+        this.jPanel9.add(jPanelTest);
+        
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+       private void jCheckBoxTestActionPerformed(java.awt.event.ActionEvent evt) {
+         this.jButton4.setEnabled(true);
+    }  
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -1323,6 +1431,7 @@ public class Screen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Screen().setVisible(true);
+               
             }
         });
     }
@@ -1333,6 +1442,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel AppScreen;
     private javax.swing.JPanel BodyPart;
     private javax.swing.JButton ExitProfile;
+    private javax.swing.JButton ExitProfile1;
     private javax.swing.JButton GroupButton;
     private javax.swing.JPanel GroupScreen;
     private javax.swing.JPanel Header;
@@ -1349,18 +1459,18 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton Notification11;
     private javax.swing.JButton Notification12;
     private javax.swing.JButton Notification13;
-    private javax.swing.JButton Notification2;
     private javax.swing.JButton Notification3;
-    private javax.swing.JButton Notification4;
     private javax.swing.JButton Notification5;
     private javax.swing.JButton Notification6;
     private javax.swing.JButton Notification7;
     private javax.swing.JButton Notification8;
     private javax.swing.JButton Notification9;
     private javax.swing.JPanel Notifications;
+    private javax.swing.JPanel PopupApple;
     private javax.swing.JPanel PopupJess;
     private javax.swing.JButton PurchaseButton;
     private javax.swing.JPanel PurchaseScreen;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -1374,13 +1484,11 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1411,9 +1519,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
@@ -1431,7 +1537,14 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -1453,15 +1566,15 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -1478,6 +1591,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -1486,6 +1600,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
