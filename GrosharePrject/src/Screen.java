@@ -52,7 +52,7 @@ public class Screen extends javax.swing.JFrame {
      */
     public Screen() {
         initComponents();
-         this.PopupApple.setVisible(false);
+//         this.PopupApple.setVisible(false);
          this.ListScreen.setVisible(false);
          this.AddScreen.setVisible(false);
          this.Notifications.setVisible(false);
@@ -74,6 +74,32 @@ public class Screen extends javax.swing.JFrame {
 
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        PopupAppleDialog = new javax.swing.JDialog();
+        PopupApple1 = new javax.swing.JPanel();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel75 = new javax.swing.JLabel();
+        jPanel41 = new javax.swing.JPanel();
+        jLabel76 = new javax.swing.JLabel();
+        ExitProfile2 = new javax.swing.JButton();
+        jLabel77 = new javax.swing.JLabel();
+        jLabel78 = new javax.swing.JLabel();
+        jSeparator16 = new javax.swing.JSeparator();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jSpinner2 = new javax.swing.JSpinner();
+        jButton3 = new javax.swing.JButton();
+        PopupJessDialog = new javax.swing.JDialog();
+        PopupJess = new javax.swing.JPanel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jPanel35 = new javax.swing.JPanel();
+        jLabel59 = new javax.swing.JLabel();
+        ExitProfile1 = new javax.swing.JButton();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel79 = new javax.swing.JLabel();
+        jSeparator14 = new javax.swing.JSeparator();
+        jSeparator15 = new javax.swing.JSeparator();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         AppScreen = new javax.swing.JPanel();
         NavBar = new javax.swing.JPanel();
@@ -87,18 +113,6 @@ public class Screen extends javax.swing.JFrame {
         HeaderLabel = new javax.swing.JLabel();
         BodyPart = new javax.swing.JPanel();
         AddScreen = new javax.swing.JPanel();
-        PopupApple = new javax.swing.JPanel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jPanel35 = new javax.swing.JPanel();
-        jLabel59 = new javax.swing.JLabel();
-        ExitProfile1 = new javax.swing.JButton();
-        jLabel60 = new javax.swing.JLabel();
-        jLabel61 = new javax.swing.JLabel();
-        jSeparator15 = new javax.swing.JSeparator();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jSpinner1 = new javax.swing.JSpinner();
-        jButton1 = new javax.swing.JButton();
         jPanel34 = new javax.swing.JPanel();
         jLabel55 = new javax.swing.JLabel();
         jLabel56 = new javax.swing.JLabel();
@@ -135,18 +149,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel38 = new javax.swing.JLabel();
         Notification3 = new javax.swing.JButton();
         GroupScreen = new javax.swing.JPanel();
-        PopupJess = new javax.swing.JPanel();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jPanel23 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        ExitProfile = new javax.swing.JButton();
-        jLabel49 = new javax.swing.JLabel();
-        jLabel50 = new javax.swing.JLabel();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel52 = new javax.swing.JLabel();
-        jSeparator12 = new javax.swing.JSeparator();
-        jSeparator13 = new javax.swing.JSeparator();
         jPanel22 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
@@ -234,6 +236,8 @@ public class Screen extends javax.swing.JFrame {
         jLabel37 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
         SummaryScreen = new javax.swing.JPanel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jScrollPane8 = new javax.swing.JScrollPane();
         jPanel26 = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
@@ -242,17 +246,164 @@ public class Screen extends javax.swing.JFrame {
         jPanel36 = new javax.swing.JPanel();
         jLabel63 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        SummaryList = new javax.swing.JPanel();
+        jLabel70 = new javax.swing.JLabel();
+        jPanel40 = new javax.swing.JPanel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
-        jLabel39 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jPanel37 = new javax.swing.JPanel();
+        jPanel38 = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        jPanel39 = new javax.swing.JPanel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
 
         jLabel6.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right.png"))); // NOI18N
         jLabel6.setToolTipText("");
 
         jLabel10.setText("jLabel10");
+
+        PopupApple1.setBackground(new java.awt.Color(204, 204, 204));
+        PopupApple1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel74.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-apple_filled.png"))); // NOI18N
+        PopupApple1.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 100, 100));
+
+        jLabel75.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel75.setText("How many?");
+        PopupApple1.add(jLabel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 50));
+
+        jPanel41.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel41.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel76.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel76.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel76.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel76.setText("Add");
+        jPanel41.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 50));
+
+        ExitProfile2.setBackground(new java.awt.Color(255, 102, 102));
+        ExitProfile2.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        ExitProfile2.setForeground(new java.awt.Color(255, 255, 255));
+        ExitProfile2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
+        ExitProfile2.setBorderPainted(false);
+        ExitProfile2.setContentAreaFilled(false);
+        ExitProfile2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitProfile2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ExitProfile2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ExitProfile2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProfile2ActionPerformed(evt);
+            }
+        });
+        jPanel41.add(ExitProfile2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
+
+        PopupApple1.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
+
+        jLabel77.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel77.setText("Apples");
+        PopupApple1.add(jLabel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel78.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jLabel78.setText("No one has requested this item yet");
+        PopupApple1.add(jLabel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 220, 30));
+
+        jSeparator16.setBackground(new java.awt.Color(255, 255, 255));
+        PopupApple1.add(jSeparator16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, -1));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Count", "Dozen", "Box", "Cup", " ", " " }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        PopupApple1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 130, 30));
+        PopupApple1.add(jSpinner2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, -1));
+
+        jButton3.setBackground(new java.awt.Color(0, 153, 102));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("Add to grocery list!");
+        jButton3.setBorderPainted(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        PopupApple1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 320, 50));
+
+        PopupAppleDialog.getContentPane().add(PopupApple1, java.awt.BorderLayout.CENTER);
+
+        PopupJess.setBackground(new java.awt.Color(204, 204, 204));
+        PopupJess.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-man_with_yellow_glasses_in_blue_shirt 2.png"))); // NOI18N
+        PopupJess.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, 100));
+
+        jLabel58.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("She currently owes you $10.00!");
+        PopupJess.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 360, 50));
+
+        jPanel35.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel59.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel59.setText("View Profile");
+        jPanel35.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, -1, 50));
+
+        ExitProfile1.setBackground(new java.awt.Color(255, 102, 102));
+        ExitProfile1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        ExitProfile1.setForeground(new java.awt.Color(255, 255, 255));
+        ExitProfile1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
+        ExitProfile1.setBorderPainted(false);
+        ExitProfile1.setContentAreaFilled(false);
+        ExitProfile1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitProfile1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ExitProfile1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ExitProfile1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProfile1ActionPerformed(evt);
+            }
+        });
+        jPanel35.add(ExitProfile1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
+
+        PopupJess.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
+
+        jLabel60.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel60.setText("Jessica J.");
+        PopupJess.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
+
+        jLabel61.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jLabel61.setText("Joined on 10/28/19");
+        PopupJess.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 220, 30));
+
+        jTextArea2.setEditable(false);
+        jTextArea2.setBackground(new java.awt.Color(204, 204, 204));
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("- Vegetarian\n- Gluten-free\n- No nuts\n- No pineapple");
+        PopupJess.add(jTextArea2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 150, 70));
+
+        jLabel79.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel79.setText("Diet Restrictions");
+        PopupJess.add(jLabel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 230, 30));
+
+        jSeparator14.setBackground(new java.awt.Color(255, 255, 255));
+        PopupJess.add(jSeparator14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 360, 10));
+
+        jSeparator15.setBackground(new java.awt.Color(255, 255, 255));
+        PopupJess.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, -1));
+
+        PopupJessDialog.getContentPane().add(PopupJess, java.awt.BorderLayout.CENTER);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -383,79 +534,6 @@ public class Screen extends javax.swing.JFrame {
 
         AddScreen.setBackground(new java.awt.Color(255, 255, 255));
         AddScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        PopupApple.setBackground(new java.awt.Color(204, 204, 204));
-        PopupApple.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-apple_filled.png"))); // NOI18N
-        PopupApple.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 100, 100));
-
-        jLabel58.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel58.setText("How many?");
-        PopupApple.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 50));
-
-        jPanel35.setBackground(new java.awt.Color(0, 153, 102));
-        jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel59.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel59.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel59.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel59.setText("Add");
-        jPanel35.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 50));
-
-        ExitProfile1.setBackground(new java.awt.Color(255, 102, 102));
-        ExitProfile1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        ExitProfile1.setForeground(new java.awt.Color(255, 255, 255));
-        ExitProfile1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
-        ExitProfile1.setBorderPainted(false);
-        ExitProfile1.setContentAreaFilled(false);
-        ExitProfile1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ExitProfile1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        ExitProfile1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ExitProfile1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitProfile1ActionPerformed(evt);
-            }
-        });
-        jPanel35.add(ExitProfile1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
-
-        PopupApple.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
-
-        jLabel60.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel60.setText("Apples");
-        PopupApple.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
-
-        jLabel61.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        jLabel61.setText("No one has requested this item yet");
-        PopupApple.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 220, 30));
-
-        jSeparator15.setBackground(new java.awt.Color(255, 255, 255));
-        PopupApple.add(jSeparator15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Count", "Dozen", "Box", "Cup", " ", " " }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        PopupApple.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 130, 30));
-        PopupApple.add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, -1));
-
-        jButton1.setBackground(new java.awt.Color(0, 153, 102));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Add to grocery list!");
-        jButton1.setBorderPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        PopupApple.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 320, 50));
-
-        AddScreen.add(PopupApple, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 360, 330));
-        PopupJess.setVisible(false);
 
         jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -753,72 +831,6 @@ public class Screen extends javax.swing.JFrame {
 
         GroupScreen.setBackground(new java.awt.Color(255, 255, 255));
         GroupScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        PopupJess.setBackground(new java.awt.Color(204, 204, 204));
-        PopupJess.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-man_with_yellow_glasses_in_blue_shirt 2.png"))); // NOI18N
-        PopupJess.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, -1, 100));
-
-        jLabel48.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("She currently owes you $10.00!");
-        PopupJess.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 360, 50));
-
-        jPanel23.setBackground(new java.awt.Color(0, 153, 102));
-        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel26.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel26.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("View Profile");
-        jPanel23.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, -1, 50));
-
-        ExitProfile.setBackground(new java.awt.Color(255, 102, 102));
-        ExitProfile.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        ExitProfile.setForeground(new java.awt.Color(255, 255, 255));
-        ExitProfile.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
-        ExitProfile.setBorderPainted(false);
-        ExitProfile.setContentAreaFilled(false);
-        ExitProfile.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ExitProfile.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        ExitProfile.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        ExitProfile.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExitProfileActionPerformed(evt);
-            }
-        });
-        jPanel23.add(ExitProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
-
-        PopupJess.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
-
-        jLabel49.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel49.setText("Jessica J.");
-        PopupJess.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 90, 50));
-
-        jLabel50.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        jLabel50.setText("Joined on 10/28/19");
-        PopupJess.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 220, 30));
-
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(204, 204, 204));
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("- Vegetarian\n- Gluten-free\n- No nuts\n- No pineapple");
-        PopupJess.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 150, 70));
-
-        jLabel52.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel52.setText("Diet Restrictions");
-        PopupJess.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 230, 30));
-
-        jSeparator12.setBackground(new java.awt.Color(255, 255, 255));
-        PopupJess.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 360, 10));
-
-        jSeparator13.setBackground(new java.awt.Color(255, 255, 255));
-        PopupJess.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, -1));
-
-        GroupScreen.add(PopupJess, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 360, 370));
-        PopupJess.setVisible(false);
 
         jPanel22.setBackground(new java.awt.Color(233, 233, 233));
         jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -1207,17 +1219,24 @@ public class Screen extends javax.swing.JFrame {
         SummaryScreen.setBackground(new java.awt.Color(255, 255, 255));
         SummaryScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel39.setText("Total Price");
+        SummaryScreen.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel8.setText("Split prices:");
+        SummaryScreen.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, 20));
+
         jPanel26.setLayout(new javax.swing.BoxLayout(jPanel26, javax.swing.BoxLayout.Y_AXIS));
 
         jPanel28.setBackground(new java.awt.Color(255, 255, 255));
         jPanel28.setLayout(new java.awt.BorderLayout());
 
         jLabel62.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel62.setText("$10.30");
+        jLabel62.setText("$1.30");
         jPanel28.add(jLabel62, java.awt.BorderLayout.LINE_END);
 
         jLabel64.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel64.setText("Apples, 12 count");
+        jLabel64.setText("You");
         jPanel28.add(jLabel64, java.awt.BorderLayout.CENTER);
 
         jPanel26.add(jPanel28);
@@ -1226,23 +1245,39 @@ public class Screen extends javax.swing.JFrame {
         jPanel36.setLayout(new java.awt.BorderLayout());
 
         jLabel63.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel63.setText("$8.64");
+        jLabel63.setText("$15.64");
         jPanel36.add(jLabel63, java.awt.BorderLayout.LINE_END);
 
         jLabel65.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel65.setText("Pears, 8 count");
+        jLabel65.setText("Jason");
         jPanel36.add(jLabel65, java.awt.BorderLayout.CENTER);
+
+        jLabel70.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel70.setText("Jason");
+        jPanel36.add(jLabel70, java.awt.BorderLayout.CENTER);
 
         jPanel26.add(jPanel36);
 
+        jPanel40.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel40.setLayout(new java.awt.BorderLayout());
+
+        jLabel71.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel71.setText("$2.00");
+        jPanel40.add(jLabel71, java.awt.BorderLayout.LINE_END);
+
+        jLabel72.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel72.setText("Jason");
+        jPanel40.add(jLabel72, java.awt.BorderLayout.CENTER);
+
+        jLabel73.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel73.setText("Jessica");
+        jPanel40.add(jLabel73, java.awt.BorderLayout.CENTER);
+
+        jPanel26.add(jPanel40);
+
         jScrollPane8.setViewportView(jPanel26);
 
-        SummaryScreen.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 350));
-
-        SummaryList.setLayout(new java.awt.GridLayout(0, 2));
-        jScrollPane7.setViewportView(SummaryList);
-
-        SummaryScreen.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 350));
+        SummaryScreen.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 360, 170));
 
         jTextField6.setEditable(false);
         jTextField6.setText("$18.64");
@@ -1252,10 +1287,7 @@ public class Screen extends javax.swing.JFrame {
                 jTextField6ActionPerformed(evt);
             }
         });
-        SummaryScreen.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 380, 90, 40));
-
-        jLabel39.setText("Total Price");
-        SummaryScreen.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
+        SummaryScreen.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, 90, 40));
 
         jButton6.setText("Close");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -1263,7 +1295,39 @@ public class Screen extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        SummaryScreen.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 180, 50));
+        SummaryScreen.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 180, 50));
+
+        jPanel37.setLayout(new javax.swing.BoxLayout(jPanel37, javax.swing.BoxLayout.Y_AXIS));
+
+        jPanel38.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel38.setLayout(new java.awt.BorderLayout());
+
+        jLabel66.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel66.setText("$10.30");
+        jPanel38.add(jLabel66, java.awt.BorderLayout.LINE_END);
+
+        jLabel67.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel67.setText("Apples, 12 count");
+        jPanel38.add(jLabel67, java.awt.BorderLayout.CENTER);
+
+        jPanel37.add(jPanel38);
+
+        jPanel39.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel39.setLayout(new java.awt.BorderLayout());
+
+        jLabel68.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel68.setText("$8.64");
+        jPanel39.add(jLabel68, java.awt.BorderLayout.LINE_END);
+
+        jLabel69.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel69.setText("Pears, 8 count");
+        jPanel39.add(jLabel69, java.awt.BorderLayout.CENTER);
+
+        jPanel37.add(jPanel39);
+
+        jScrollPane9.setViewportView(jPanel37);
+
+        SummaryScreen.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 360, 90));
 
         BodyPart.add(SummaryScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -1320,7 +1384,7 @@ public class Screen extends javax.swing.JFrame {
        this.HeaderLabel.setText("Add to list");
         this.jPanel34.setVisible(true);
         this.jScrollPane5.setVisible(false);
-        this.PopupApple.setVisible(false);
+//        this.PopupApple.setVisible(false);
         this.BodyPart.repaint();
     }//GEN-LAST:event_AddButtonActionPerformed
 
@@ -1377,12 +1441,9 @@ public class Screen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void ExitProfileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfileActionPerformed
-        this.PopupJess.setVisible(false);
-    }//GEN-LAST:event_ExitProfileActionPerformed
-
     private void JessProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JessProfileMouseClicked
-        this.PopupJess.setVisible(true);
+        this.PopupJessDialog.setSize(360,370);
+        this.PopupJessDialog.setVisible(true);
     }//GEN-LAST:event_JessProfileMouseClicked
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -1403,7 +1464,8 @@ public class Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_Notification3ActionPerformed
 
     private void Notification5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification5ActionPerformed
-        this.PopupApple.setVisible(true);
+        this.PopupAppleDialog.setSize(360, 350);
+        this.PopupAppleDialog.setVisible(true);
     }//GEN-LAST:event_Notification5ActionPerformed
 
     private void Notification6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification6ActionPerformed
@@ -1473,16 +1535,77 @@ public class Screen extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Notification13ActionPerformed
 
-    private void ExitProfile1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile1ActionPerformed
-        this.PopupApple.setVisible(false);
-    }//GEN-LAST:event_ExitProfile1ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       this.PopupApple.setVisible(false);
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        this.GeneratedList.removeAll();
+        this.GeneratedList.validate();
+        this.GeneratedList.repaint();
+
+        for (int i = this.jPanel9.getComponentCount() - 1; i >= 0; i--) {
+            JPanel innerPanel = (JPanel) this.jPanel9.getComponent(i);
+            JCheckBox temp = (JCheckBox) innerPanel.getComponent(0);
+            if (temp.isSelected()) {
+                this.jPanel9.remove(innerPanel);
+            }
+        }
+
+        this.jPanel9.validate();
+        this.jPanel9.repaint();
+
+        this.currentTotal += this.calculatorTotal;
+        //        this.totalPrice.setText("$" + df.format((this.currentTotal / this.model.getSize())));
+        //        this.totalCost.setText("$" + df.format(this.currentTotal));
+
+        //        this.jPanel4.repaint();
+
+        this.calculatorTotal = 0.00;
+
+        this.InputScreen.setVisible(false);
+        this.HeaderLabel.setText("November 7, 2019");
+        this.SummaryScreen.setVisible(true);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
+        this.HomeScreen.setVisible(false);
+        this.HeaderLabel.setText("Purchases");
+        this.PurchaseScreen.setVisible(true);
+    }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        this.SummaryScreen.setVisible(true);
+        this.HeaderLabel.setText("November 7, 2019");
+        this.PurchaseScreen.setVisible(false);
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+               this.HomeScreen.setVisible(false);
+        this.HeaderLabel.setText("Purchases");
+        this.PurchaseScreen.setVisible(true);
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        this.SummaryScreen.setVisible(false);
+        this.HeaderLabel.setText("Home");
+        this.HomeScreen.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField6ActionPerformed
+
+    private void ExitProfile2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile2ActionPerformed
+         this.PopupAppleDialog.setVisible(false);
+    }//GEN-LAST:event_ExitProfile2ActionPerformed
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+          this.PopupAppleDialog.setVisible(false);
         for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
            this.BodyPart.getComponent(i).setVisible(false);
         }
@@ -1531,68 +1654,11 @@ public class Screen extends javax.swing.JFrame {
        this.ListScreen.setVisible(true);
        this.HeaderLabel.setText("List");
         this.BodyPart.repaint();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.GeneratedList.removeAll();
-        this.GeneratedList.validate();
-        this.GeneratedList.repaint();
-
-        for (int i = this.jPanel9.getComponentCount() - 1; i >= 0; i--) {
-            JPanel innerPanel = (JPanel) this.jPanel9.getComponent(i);
-            JCheckBox temp = (JCheckBox) innerPanel.getComponent(0);
-            if (temp.isSelected()) {
-                this.jPanel9.remove(innerPanel);
-            }
-        }
-
-        this.jPanel9.validate();
-        this.jPanel9.repaint();
-
-        this.currentTotal += this.calculatorTotal;
-        //        this.totalPrice.setText("$" + df.format((this.currentTotal / this.model.getSize())));
-        //        this.totalCost.setText("$" + df.format(this.currentTotal));
-
-        //        this.jPanel4.repaint();
-
-        this.calculatorTotal = 0.00;
-
-        this.InputScreen.setVisible(false);
-        this.HeaderLabel.setText("November 7, 2019");
-        this.SummaryScreen.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        this.SummaryScreen.setVisible(false);
-         this.HeaderLabel.setText("Home");
-        this.HomeScreen.setVisible(true);
-    }//GEN-LAST:event_jButton6ActionPerformed
-
-    private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
-        this.HomeScreen.setVisible(false);
-        this.HeaderLabel.setText("Purchases");
-        this.PurchaseScreen.setVisible(true);
-    }//GEN-LAST:event_jPanel5MouseClicked
-
-    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
-        this.SummaryScreen.setVisible(true);
-        this.HeaderLabel.setText("November 7, 2019");
-        this.PurchaseScreen.setVisible(false);
-    }//GEN-LAST:event_jButton17ActionPerformed
-
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-               this.HomeScreen.setVisible(false);
-        this.HeaderLabel.setText("Purchases");
-        this.PurchaseScreen.setVisible(true);
-    }//GEN-LAST:event_jLabel2MouseClicked
+    private void ExitProfile1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile1ActionPerformed
+        this.PopupJessDialog.setVisible(false);
+    }//GEN-LAST:event_ExitProfile1ActionPerformed
 
        private void jCheckBoxTestActionPerformed(java.awt.event.ActionEvent evt) {
          this.jButton4.setEnabled(true);
@@ -1640,8 +1706,8 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel AddScreen;
     private javax.swing.JPanel AppScreen;
     private javax.swing.JPanel BodyPart;
-    private javax.swing.JButton ExitProfile;
     private javax.swing.JButton ExitProfile1;
+    private javax.swing.JButton ExitProfile2;
     private javax.swing.JPanel GeneratedList;
     private javax.swing.JButton GroupButton;
     private javax.swing.JPanel GroupScreen;
@@ -1667,13 +1733,13 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton Notification8;
     private javax.swing.JButton Notification9;
     private javax.swing.JPanel Notifications;
-    private javax.swing.JPanel PopupApple;
+    private javax.swing.JPanel PopupApple1;
+    private javax.swing.JDialog PopupAppleDialog;
     private javax.swing.JPanel PopupJess;
+    private javax.swing.JDialog PopupJessDialog;
     private javax.swing.JButton PurchaseButton;
     private javax.swing.JPanel PurchaseScreen;
-    private javax.swing.JPanel SummaryList;
     private javax.swing.JPanel SummaryScreen;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
@@ -1682,6 +1748,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -1689,7 +1756,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1706,7 +1773,6 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -1726,16 +1792,11 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
-    private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel55;
@@ -1750,7 +1811,22 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
+    private javax.swing.JLabel jLabel77;
+    private javax.swing.JLabel jLabel78;
+    private javax.swing.JLabel jLabel79;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1764,7 +1840,6 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
@@ -1779,6 +1854,11 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel34;
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
@@ -1789,14 +1869,14 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
-    private javax.swing.JSeparator jSeparator12;
-    private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -1805,9 +1885,9 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
