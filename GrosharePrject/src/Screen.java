@@ -339,6 +339,7 @@ public class Screen extends javax.swing.JFrame {
         PopupApple1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 320, 50));
 
         PopupAppleDialog.getContentPane().add(PopupApple1, java.awt.BorderLayout.CENTER);
+        PopupJess.setVisible(false);
 
         PopupJess.setBackground(new java.awt.Color(204, 204, 204));
         PopupJess.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -466,7 +467,7 @@ public class Screen extends javax.swing.JFrame {
         });
         NavBar.add(AddButton);
 
-        PurchaseButton.setBackground(new java.awt.Color(255, 255, 255));
+        PurchaseButton.setBackground(new java.awt.Color(255, 51, 51));
         PurchaseButton.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         PurchaseButton.setForeground(new java.awt.Color(255, 255, 255));
         PurchaseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-money.png"))); // NOI18N
@@ -931,12 +932,13 @@ public class Screen extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("You currently owe...");
+        jLabel4.setText("You currently owe:");
         jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 30));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("$12.96!");
+        jLabel5.setText("$12.96");
+        jLabel5.setToolTipText("");
         jPanel5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 70, 30));
 
         HomeScreen.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 380, 70));
@@ -994,12 +996,12 @@ public class Screen extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("You currently owe...");
+        jLabel11.setText("You currently owe");
         jPanel8.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
 
         jLabel12.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("$12.96!");
+        jLabel12.setText("$12.96");
         jPanel8.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 70, 30));
         jPanel8.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 360, -1));
 
@@ -1075,12 +1077,12 @@ public class Screen extends javax.swing.JFrame {
 
         jLabel23.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("Others owe you...");
+        jLabel23.setText("Others owe you");
         jPanel21.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
 
         jLabel24.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel24.setText("$10.00!");
+        jLabel24.setText("$10.00");
         jPanel21.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 10, 70, 30));
         jPanel21.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 360, -1));
 
