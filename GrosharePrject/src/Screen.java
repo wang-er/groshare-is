@@ -1077,7 +1077,7 @@ public class Screen extends javax.swing.JFrame {
 
         jLabel23.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel23.setText("Others owe you");
+        jLabel23.setText("Others owe you:");
         jPanel21.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, 30));
 
         jLabel24.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
