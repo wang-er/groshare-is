@@ -3,6 +3,7 @@ import java.awt.List;
 import java.awt.Point;
 import java.text.DecimalFormat;
 import javax.swing.DefaultListModel;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
@@ -62,6 +63,12 @@ public class Screen extends javax.swing.JFrame {
          this.InputScreen.setVisible(false);
          this.HomeScreen.setVisible(true);
     }
+    
+    
+    private void ButtonNonActivation(JButton currentButton){
+        
+       
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -104,8 +111,8 @@ public class Screen extends javax.swing.JFrame {
         AppScreen = new javax.swing.JPanel();
         NavBar = new javax.swing.JPanel();
         HomeButton = new javax.swing.JButton();
-        ListButton = new javax.swing.JButton();
         AddButton = new javax.swing.JButton();
+        ListButton = new javax.swing.JButton();
         PurchaseButton = new javax.swing.JButton();
         GroupButton = new javax.swing.JButton();
         Header = new javax.swing.JPanel();
@@ -136,6 +143,7 @@ public class Screen extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         Notification12 = new javax.swing.JButton();
         Notification13 = new javax.swing.JButton();
+        Notification14 = new javax.swing.JButton();
         ListScreen = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -148,6 +156,7 @@ public class Screen extends javax.swing.JFrame {
         jCheckBox3 = new javax.swing.JCheckBox();
         jLabel38 = new javax.swing.JLabel();
         Notification3 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         GroupScreen = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         jLabel32 = new javax.swing.JLabel();
@@ -212,23 +221,18 @@ public class Screen extends javax.swing.JFrame {
         jPanel10 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jButton12 = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
         jPanel12 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
-        jButton13 = new javax.swing.JButton();
         jSeparator4 = new javax.swing.JSeparator();
         jPanel13 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
         jSeparator5 = new javax.swing.JSeparator();
         jPanel14 = new javax.swing.JPanel();
         jLabel17 = new javax.swing.JLabel();
-        jButton15 = new javax.swing.JButton();
         jSeparator6 = new javax.swing.JSeparator();
         jPanel15 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
-        jButton16 = new javax.swing.JButton();
         InputScreen = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         GeneratedList = new javax.swing.JPanel();
@@ -416,7 +420,7 @@ public class Screen extends javax.swing.JFrame {
         AppScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         NavBar.setBackground(new java.awt.Color(0, 153, 102));
-        NavBar.setLayout(new java.awt.GridLayout(1, 0, 20, 0));
+        NavBar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         HomeButton.setBackground(new java.awt.Color(255, 255, 255));
         HomeButton.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
@@ -433,7 +437,24 @@ public class Screen extends javax.swing.JFrame {
                 HomeButtonActionPerformed(evt);
             }
         });
-        NavBar.add(HomeButton);
+        NavBar.add(HomeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 64, -1));
+
+        AddButton.setBackground(new java.awt.Color(255, 255, 255));
+        AddButton.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        AddButton.setForeground(new java.awt.Color(255, 255, 255));
+        AddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math.png"))); // NOI18N
+        AddButton.setText("Add food");
+        AddButton.setBorderPainted(false);
+        AddButton.setContentAreaFilled(false);
+        AddButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        AddButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        AddButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        AddButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddButtonActionPerformed(evt);
+            }
+        });
+        NavBar.add(AddButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 80, 61));
 
         ListButton.setBackground(new java.awt.Color(255, 255, 255));
         ListButton.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
@@ -450,22 +471,7 @@ public class Screen extends javax.swing.JFrame {
                 ListButtonActionPerformed(evt);
             }
         });
-        NavBar.add(ListButton);
-
-        AddButton.setBackground(new java.awt.Color(255, 102, 102));
-        AddButton.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        AddButton.setForeground(new java.awt.Color(255, 255, 255));
-        AddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math.png"))); // NOI18N
-        AddButton.setBorderPainted(false);
-        AddButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AddButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        AddButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        AddButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddButtonActionPerformed(evt);
-            }
-        });
-        NavBar.add(AddButton);
+        NavBar.add(ListButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 80, -1));
 
         PurchaseButton.setBackground(new java.awt.Color(255, 51, 51));
         PurchaseButton.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
@@ -483,7 +489,7 @@ public class Screen extends javax.swing.JFrame {
                 PurchaseButtonActionPerformed(evt);
             }
         });
-        NavBar.add(PurchaseButton);
+        NavBar.add(PurchaseButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 0, 90, -1));
 
         GroupButton.setBackground(new java.awt.Color(255, 255, 255));
         GroupButton.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
@@ -500,7 +506,7 @@ public class Screen extends javax.swing.JFrame {
                 GroupButtonActionPerformed(evt);
             }
         });
-        NavBar.add(GroupButton);
+        NavBar.add(GroupButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(336, 0, 64, -1));
 
         AppScreen.add(NavBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 490, 400, -1));
 
@@ -565,10 +571,10 @@ public class Screen extends javax.swing.JFrame {
         });
         AddScreen.add(Notification9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 50, 50));
 
-        Notification10.setBackground(new java.awt.Color(0, 153, 204));
+        Notification10.setBackground(new java.awt.Color(153, 102, 255));
         Notification10.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification10.setForeground(new java.awt.Color(255, 255, 255));
-        Notification10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-tetra_pak_filled.png"))); // NOI18N
+        Notification10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-questions_filled.png"))); // NOI18N
         Notification10.setBorderPainted(false);
         Notification10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Notification10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -578,9 +584,9 @@ public class Screen extends javax.swing.JFrame {
                 Notification10ActionPerformed(evt);
             }
         });
-        AddScreen.add(Notification10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 50, 50));
+        AddScreen.add(Notification10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 50, 50));
 
-        Notification11.setBackground(new java.awt.Color(255, 102, 102));
+        Notification11.setBackground(new java.awt.Color(255, 153, 51));
         Notification11.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification11.setForeground(new java.awt.Color(255, 255, 255));
         Notification11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-orange_filled.png"))); // NOI18N
@@ -724,7 +730,7 @@ public class Screen extends javax.swing.JFrame {
         });
         AddScreen.add(Notification12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 50, 50));
 
-        Notification13.setBackground(new java.awt.Color(153, 0, 51));
+        Notification13.setBackground(new java.awt.Color(255, 102, 102));
         Notification13.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification13.setForeground(new java.awt.Color(255, 255, 255));
         Notification13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-steak_rare_filled.png"))); // NOI18N
@@ -738,6 +744,21 @@ public class Screen extends javax.swing.JFrame {
             }
         });
         AddScreen.add(Notification13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 50, 50));
+
+        Notification14.setBackground(new java.awt.Color(0, 153, 204));
+        Notification14.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        Notification14.setForeground(new java.awt.Color(255, 255, 255));
+        Notification14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-tetra_pak_filled.png"))); // NOI18N
+        Notification14.setBorderPainted(false);
+        Notification14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Notification14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Notification14.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        Notification14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Notification14ActionPerformed(evt);
+            }
+        });
+        AddScreen.add(Notification14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 50, 50));
 
         BodyPart.add(AddScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -776,7 +797,7 @@ public class Screen extends javax.swing.JFrame {
         Notification1.setBackground(new java.awt.Color(255, 102, 102));
         Notification1.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification1.setForeground(new java.awt.Color(255, 255, 255));
-        Notification1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
+        Notification1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-edit.png"))); // NOI18N
         Notification1.setBorderPainted(false);
         Notification1.setContentAreaFilled(false);
         Notification1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -808,7 +829,7 @@ public class Screen extends javax.swing.JFrame {
         Notification3.setBackground(new java.awt.Color(255, 102, 102));
         Notification3.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification3.setForeground(new java.awt.Color(255, 255, 255));
-        Notification3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
+        Notification3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-edit.png"))); // NOI18N
         Notification3.setBorderPainted(false);
         Notification3.setContentAreaFilled(false);
         Notification3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -825,7 +846,15 @@ public class Screen extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jPanel9);
 
-        ListScreen.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 350));
+        ListScreen.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 290));
+
+        jButton1.setText("Add more items!");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        ListScreen.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 360, 50));
 
         BodyPart.add(ListScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -1112,11 +1141,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel14.setText("Jason added 6 pears onto the list!");
         jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
-        jButton12.setToolTipText("");
-        jButton12.setBorderPainted(false);
-        jPanel11.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
-
         jPanel10.add(jPanel11);
         jPanel10.add(jSeparator3);
 
@@ -1126,11 +1150,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
         jLabel15.setText("Jason added 6 pears onto the list!");
         jPanel12.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
-        jButton13.setToolTipText("");
-        jButton13.setBorderPainted(false);
-        jPanel12.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
 
         jPanel10.add(jPanel12);
         jPanel10.add(jSeparator4);
@@ -1142,11 +1161,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel16.setText("Jason added 6 pears onto the list!");
         jPanel13.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
 
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
-        jButton14.setToolTipText("");
-        jButton14.setBorderPainted(false);
-        jPanel13.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
-
         jPanel10.add(jPanel13);
         jPanel10.add(jSeparator5);
 
@@ -1157,11 +1171,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel17.setText("Jason added 6 pears onto the list!");
         jPanel14.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
-        jButton15.setToolTipText("");
-        jButton15.setBorderPainted(false);
-        jPanel14.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
-
         jPanel10.add(jPanel14);
         jPanel10.add(jSeparator6);
 
@@ -1171,11 +1180,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
         jLabel18.setText("Jason added 6 pears onto the list!");
         jPanel15.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
-        jButton16.setToolTipText("");
-        jButton16.setBorderPainted(false);
-        jPanel15.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, 60, 60));
 
         jPanel10.add(jPanel15);
 
@@ -1348,6 +1352,7 @@ public class Screen extends javax.swing.JFrame {
         
         this.ListScreen.setVisible(true);
         this.HeaderLabel.setText("List");
+        this.ListButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-ingredients_list 2.png")));
          this.BodyPart.repaint();
     }//GEN-LAST:event_ListButtonActionPerformed
 
@@ -1590,8 +1595,8 @@ public class Screen extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         this.SummaryScreen.setVisible(false);
-        this.HeaderLabel.setText("Home");
-        this.HomeScreen.setVisible(true);
+        this.HeaderLabel.setText("Purchases");
+        this.PurchaseScreen.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
@@ -1619,7 +1624,7 @@ public class Screen extends javax.swing.JFrame {
         javax.swing.JButton NotificationTest = new javax.swing.JButton();
         javax.swing.JCheckBox jCheckBoxTest = new javax.swing.JCheckBox();
         
-        jPanelTest.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelTest.setBackground(new java.awt.Color(200, 200, 200));
         jPanelTest.setLayout(new java.awt.BorderLayout());
         
         
@@ -1637,7 +1642,7 @@ public class Screen extends javax.swing.JFrame {
         NotificationTest.setBackground(new java.awt.Color(255, 102, 102));
         NotificationTest.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         NotificationTest.setForeground(new java.awt.Color(255, 255, 255));
-        NotificationTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math 2.png"))); // NOI18N
+        NotificationTest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-edit.png"))); // NOI18N
         NotificationTest.setBorderPainted(false);
         NotificationTest.setContentAreaFilled(false);
         NotificationTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1661,6 +1666,22 @@ public class Screen extends javax.swing.JFrame {
     private void ExitProfile1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile1ActionPerformed
         this.PopupJessDialog.setVisible(false);
     }//GEN-LAST:event_ExitProfile1ActionPerformed
+
+    private void Notification14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification14ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Notification14ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+                       for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+       this.AddScreen.setVisible(true);
+       this.HeaderLabel.setText("Add to list");
+        this.jPanel34.setVisible(true);
+        this.jScrollPane5.setVisible(false);
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
        private void jCheckBoxTestActionPerformed(java.awt.event.ActionEvent evt) {
          this.jButton4.setEnabled(true);
@@ -1728,6 +1749,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton Notification11;
     private javax.swing.JButton Notification12;
     private javax.swing.JButton Notification13;
+    private javax.swing.JButton Notification14;
     private javax.swing.JButton Notification3;
     private javax.swing.JButton Notification5;
     private javax.swing.JButton Notification6;
@@ -1742,11 +1764,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton PurchaseButton;
     private javax.swing.JPanel PurchaseScreen;
     private javax.swing.JPanel SummaryScreen;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton2;
