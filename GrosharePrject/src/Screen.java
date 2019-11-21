@@ -1,14 +1,21 @@
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.List;
 import java.awt.Point;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.text.DecimalFormat;
 import javax.swing.DefaultListModel;
+import javax.swing.FocusManager;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
+import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -22,8 +29,40 @@ import javax.swing.event.ChangeListener;
 /**
  *
  * @author erinwang
+ * 
+ * 
  */
+
+
+
+
+
+
 public class Screen extends javax.swing.JFrame {
+    class PTextField extends JTextField {
+
+    public PTextField(final String proptText) {
+        super(proptText);
+        addFocusListener(new FocusListener() {
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                if(getText().isEmpty()) {
+                    setText(proptText);
+                }
+            }
+
+            @Override
+            public void focusGained(FocusEvent e) {
+                if(getText().equals(proptText)) {
+                    setText("");
+                }
+            }
+        });
+
+    }
+
+}
     
         DefaultListModel<String> model = new DefaultListModel<>();
     private static DecimalFormat df = new DecimalFormat("0.00");
@@ -31,6 +70,7 @@ public class Screen extends javax.swing.JFrame {
     double indTotal = 3.12;
     double calculatorTotal = 0.00;
     double[] spinnerPrices;
+    boolean appleAdded = false;
 
     private ChangeListener makeABoi(int i) {
         return new ChangeListener() {
@@ -61,13 +101,55 @@ public class Screen extends javax.swing.JFrame {
          this.PurchaseScreen.setVisible(false);
          this.SummaryScreen.setVisible(false);
          this.InputScreen.setVisible(false);
+                 this.HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-a_home 2.png")));
+        this.HomeButton.setForeground(new java.awt.Color(200, 200, 200));
          this.HomeScreen.setVisible(true);
+          this.BackButton.setVisible(false);
+         
     }
     
     
-    private void ButtonNonActivation(JButton currentButton){
+    private void ButtonNonActivation(){
+        this.HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-a_home.png")));
+        this.HomeButton.setForeground(new java.awt.Color(255, 255, 255));
         
-       
+        this.ListButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-ingredients_list.png")));
+        this.ListButton.setForeground(new java.awt.Color(255, 255, 255));
+        
+        this.AddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus_math.png")));
+        this.AddButton.setForeground(new java.awt.Color(255, 255, 255));
+        
+        this.PurchaseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-money.png")));
+        this.PurchaseButton.setForeground(new java.awt.Color(255, 255, 255));
+        
+        this.GroupButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-conference_call.png")));
+        this.GroupButton.setForeground(new java.awt.Color(255, 255, 255));    
+    }
+    
+    private void ButtonActivated(String screen) {
+        if(screen.equals("Home")) {
+                    this.HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-a_home 2.png")));
+        this.HomeButton.setForeground(new java.awt.Color(200, 200, 200));
+            
+        }
+        if(screen.equals("List")) {
+        this.ListButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-ingredients_list 2.png")));
+        this.ListButton.setForeground(new java.awt.Color(200, 200, 200));
+        }
+         if(screen.equals("Add")) {
+                     this.AddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus.png")));
+        this.AddButton.setForeground(new java.awt.Color(200, 200, 200));
+            
+        }
+        if(screen.equals("Purchase")) {
+        this.PurchaseButton.setForeground(new java.awt.Color(200, 200, 200));
+         this.PurchaseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-money 2.png")));
+            
+        }
+        if(screen.equals("Group")) {
+         this.GroupButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-conference_call 2.png")));
+        this.GroupButton.setForeground(new java.awt.Color(200, 200, 200));
+        }
     }
 
     /**
@@ -107,6 +189,58 @@ public class Screen extends javax.swing.JFrame {
         jLabel79 = new javax.swing.JLabel();
         jSeparator14 = new javax.swing.JSeparator();
         jSeparator15 = new javax.swing.JSeparator();
+        NotificationDialog = new javax.swing.JDialog();
+        NotificationScreen = new javax.swing.JPanel();
+        jPanel42 = new javax.swing.JPanel();
+        jLabel82 = new javax.swing.JLabel();
+        ExitProfile3 = new javax.swing.JButton();
+        Notifications = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
+        jSeparator4 = new javax.swing.JSeparator();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
+        jSeparator5 = new javax.swing.JSeparator();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
+        jSeparator6 = new javax.swing.JSeparator();
+        jPanel15 = new javax.swing.JPanel();
+        jLabel18 = new javax.swing.JLabel();
+        jButton14 = new javax.swing.JButton();
+        PopupItem = new javax.swing.JDialog();
+        PopupApple2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel80 = new javax.swing.JLabel();
+        jLabel81 = new javax.swing.JLabel();
+        jPanel43 = new javax.swing.JPanel();
+        jLabel83 = new javax.swing.JLabel();
+        ExitProfile4 = new javax.swing.JButton();
+        jSeparator17 = new javax.swing.JSeparator();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jSpinner3 = new javax.swing.JSpinner();
+        jButton15 = new javax.swing.JButton();
+        jTextField2 = new PTextField("Input Name");
+        PopupEdit = new javax.swing.JDialog();
+        PopupApple3 = new javax.swing.JPanel();
+        jLabel85 = new javax.swing.JLabel();
+        jPanel44 = new javax.swing.JPanel();
+        jLabel86 = new javax.swing.JLabel();
+        ExitProfile5 = new javax.swing.JButton();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        jSpinner4 = new javax.swing.JSpinner();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         AppScreen = new javax.swing.JPanel();
         NavBar = new javax.swing.JPanel();
@@ -116,6 +250,7 @@ public class Screen extends javax.swing.JFrame {
         PurchaseButton = new javax.swing.JButton();
         GroupButton = new javax.swing.JButton();
         Header = new javax.swing.JPanel();
+        BackButton = new javax.swing.JButton();
         Notification = new javax.swing.JButton();
         HeaderLabel = new javax.swing.JLabel();
         BodyPart = new javax.swing.JPanel();
@@ -140,10 +275,11 @@ public class Screen extends javax.swing.JFrame {
         jPanel33 = new javax.swing.JPanel();
         jLabel54 = new javax.swing.JLabel();
         Notification8 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        jTextField1 = new PTextField("Search...");
         Notification12 = new javax.swing.JButton();
         Notification13 = new javax.swing.JButton();
         Notification14 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         ListScreen = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -174,6 +310,7 @@ public class Screen extends javax.swing.JFrame {
         jLabel46 = new javax.swing.JLabel();
         jLabel47 = new javax.swing.JLabel();
         jSeparator11 = new javax.swing.JSeparator();
+        jButton16 = new javax.swing.JButton();
         HomeScreen = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -216,23 +353,6 @@ public class Screen extends javax.swing.JFrame {
         jSeparator9 = new javax.swing.JSeparator();
         jLabel27 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        Notifications = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jPanel10 = new javax.swing.JPanel();
-        jPanel11 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jSeparator4 = new javax.swing.JSeparator();
-        jPanel13 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jSeparator5 = new javax.swing.JSeparator();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jSeparator6 = new javax.swing.JSeparator();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
         InputScreen = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         GeneratedList = new javax.swing.JPanel();
@@ -410,6 +530,289 @@ public class Screen extends javax.swing.JFrame {
 
         PopupJessDialog.getContentPane().add(PopupJess, java.awt.BorderLayout.CENTER);
 
+        NotificationScreen.setBackground(new java.awt.Color(204, 204, 204));
+        NotificationScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel42.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel42.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel82.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel82.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel82.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel82.setText("Notfications");
+        jPanel42.add(jLabel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, -1, 50));
+
+        ExitProfile3.setBackground(new java.awt.Color(255, 102, 102));
+        ExitProfile3.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        ExitProfile3.setForeground(new java.awt.Color(255, 255, 255));
+        ExitProfile3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
+        ExitProfile3.setBorderPainted(false);
+        ExitProfile3.setContentAreaFilled(false);
+        ExitProfile3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitProfile3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ExitProfile3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ExitProfile3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProfile3ActionPerformed(evt);
+            }
+        });
+        jPanel42.add(ExitProfile3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 50, 50));
+
+        NotificationScreen.add(jPanel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 50));
+
+        Notifications.setBackground(new java.awt.Color(255, 255, 255));
+        Notifications.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel10.setLayout(new javax.swing.BoxLayout(jPanel10, javax.swing.BoxLayout.Y_AXIS));
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
+        jLabel14.setText("Jason added 6 pears onto the list!");
+        jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
+
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
+        jButton11.setToolTipText("");
+        jButton11.setBorderPainted(false);
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        jPanel11.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
+
+        jPanel10.add(jPanel11);
+        jPanel10.add(jSeparator3);
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
+        jLabel15.setText("Jason added 6 pears onto the list!");
+        jPanel12.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
+
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
+        jButton12.setToolTipText("");
+        jButton12.setBorderPainted(false);
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+        jPanel12.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
+
+        jPanel10.add(jPanel12);
+        jPanel10.add(jSeparator4);
+
+        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
+        jLabel16.setText("Jason added 6 pears onto the list!");
+        jPanel13.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
+
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
+        jButton13.setToolTipText("");
+        jButton13.setBorderPainted(false);
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
+
+        jPanel10.add(jPanel13);
+        jPanel10.add(jSeparator5);
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
+        jLabel17.setText("Jason added 6 pears onto the list!");
+        jPanel14.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
+
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
+        jButton10.setToolTipText("");
+        jButton10.setBorderPainted(false);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
+
+        jPanel10.add(jPanel14);
+        jPanel10.add(jSeparator6);
+
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
+        jLabel18.setText("Jason added 6 pears onto the list!");
+        jPanel15.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
+
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
+        jButton14.setToolTipText("");
+        jButton14.setBorderPainted(false);
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+        jPanel15.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
+
+        jPanel10.add(jPanel15);
+
+        jScrollPane3.setViewportView(jPanel10);
+
+        Notifications.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 380, 370));
+
+        NotificationScreen.add(Notifications, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
+        HomeScreen.setVisible(false);
+
+        NotificationDialog.getContentPane().add(NotificationScreen, java.awt.BorderLayout.CENTER);
+        PopupJess.setVisible(false);
+
+        PopupApple2.setBackground(new java.awt.Color(204, 204, 204));
+        PopupApple2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel21.setText("This eventually will be added to the list screen ");
+        jPanel4.add(jLabel21);
+
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel22.setText("with the correct name and count");
+        jPanel4.add(jLabel22);
+
+        PopupApple2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 330, 60));
+
+        jLabel80.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-question_mark_filled.png"))); // NOI18N
+        PopupApple2.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 100, 100));
+
+        jLabel81.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel81.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel81.setText("How many?");
+        PopupApple2.add(jLabel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 130, 50));
+
+        jPanel43.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel43.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel83.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel83.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel83.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel83.setText("Add");
+        jPanel43.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 50));
+
+        ExitProfile4.setBackground(new java.awt.Color(255, 102, 102));
+        ExitProfile4.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        ExitProfile4.setForeground(new java.awt.Color(255, 255, 255));
+        ExitProfile4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
+        ExitProfile4.setBorderPainted(false);
+        ExitProfile4.setContentAreaFilled(false);
+        ExitProfile4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitProfile4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ExitProfile4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ExitProfile4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProfile4ActionPerformed(evt);
+            }
+        });
+        jPanel43.add(ExitProfile4, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
+
+        PopupApple2.add(jPanel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
+
+        jSeparator17.setBackground(new java.awt.Color(255, 255, 255));
+        PopupApple2.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 360, -1));
+
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Count", "Dozen", "Box", "Cup", " ", " " }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        PopupApple2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, 130, 30));
+        PopupApple2.add(jSpinner3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 90, -1));
+
+        jButton15.setBackground(new java.awt.Color(0, 153, 102));
+        jButton15.setForeground(new java.awt.Color(255, 255, 255));
+        jButton15.setText("Add to grocery list!");
+        jButton15.setBorderPainted(false);
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
+        PopupApple2.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 320, 50));
+        PopupApple2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 240, 60));
+
+        PopupItem.getContentPane().add(PopupApple2, java.awt.BorderLayout.CENTER);
+        PopupJess.setVisible(false);
+
+        PopupApple3.setBackground(new java.awt.Color(204, 204, 204));
+        PopupApple3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel85.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel85.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel85.setText("Change quantity");
+        PopupApple3.add(jLabel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 160, 50));
+
+        jPanel44.setBackground(new java.awt.Color(0, 153, 102));
+        jPanel44.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel86.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel86.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel86.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel86.setText("Edit");
+        jPanel44.add(jLabel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, -1, 50));
+
+        ExitProfile5.setBackground(new java.awt.Color(255, 102, 102));
+        ExitProfile5.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        ExitProfile5.setForeground(new java.awt.Color(255, 255, 255));
+        ExitProfile5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-delete_sign.png"))); // NOI18N
+        ExitProfile5.setBorderPainted(false);
+        ExitProfile5.setContentAreaFilled(false);
+        ExitProfile5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ExitProfile5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ExitProfile5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ExitProfile5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExitProfile5ActionPerformed(evt);
+            }
+        });
+        jPanel44.add(ExitProfile5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 0, 50, 50));
+
+        PopupApple3.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 360, 50));
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Count", "Dozen", "Box", "Cup", " ", " " }));
+        jComboBox4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox4ActionPerformed(evt);
+            }
+        });
+        PopupApple3.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 130, 30));
+        PopupApple3.add(jSpinner4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 90, -1));
+
+        jButton19.setBackground(new java.awt.Color(0, 153, 102));
+        jButton19.setForeground(new java.awt.Color(255, 255, 255));
+        jButton19.setText("Save Changes");
+        jButton19.setBorderPainted(false);
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+        PopupApple3.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 170, 50));
+
+        jButton20.setText("Delete item");
+        PopupApple3.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 100, 50));
+
+        PopupEdit.getContentPane().add(PopupApple3, java.awt.BorderLayout.CENTER);
+        PopupJess.setVisible(false);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -513,6 +916,22 @@ public class Screen extends javax.swing.JFrame {
         Header.setBackground(new java.awt.Color(0, 153, 102));
         Header.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        BackButton.setBackground(new java.awt.Color(255, 102, 102));
+        BackButton.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        BackButton.setForeground(new java.awt.Color(255, 255, 255));
+        BackButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_left.png"))); // NOI18N
+        BackButton.setBorderPainted(false);
+        BackButton.setContentAreaFilled(false);
+        BackButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BackButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BackButton.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonActionPerformed(evt);
+            }
+        });
+        Header.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(2, 0, -1, 50));
+
         Notification.setBackground(new java.awt.Color(255, 102, 102));
         Notification.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         Notification.setForeground(new java.awt.Color(255, 255, 255));
@@ -547,14 +966,14 @@ public class Screen extends javax.swing.JFrame {
         jLabel55.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel55.setText("Select a category!");
-        jPanel34.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 280, 30));
+        jPanel34.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 280, 30));
 
         jLabel56.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel56.setText("Search or");
-        jPanel34.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 280, 30));
+        jPanel34.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 280, 30));
 
-        AddScreen.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 350));
+        AddScreen.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 260));
 
         Notification9.setBackground(new java.awt.Color(102, 153, 0));
         Notification9.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
@@ -705,9 +1124,8 @@ public class Screen extends javax.swing.JFrame {
 
         jScrollPane5.setViewportView(jPanel29);
 
-        AddScreen.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 350));
+        AddScreen.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 280, 260));
 
-        jTextField1.setText("Search...");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -759,6 +1177,14 @@ public class Screen extends javax.swing.JFrame {
             }
         });
         AddScreen.add(Notification14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 50, 50));
+
+        jButton7.setText("Add manually");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        AddScreen.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 370, 280, 60));
 
         BodyPart.add(AddScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -933,6 +1359,14 @@ public class Screen extends javax.swing.JFrame {
         GroupScreen.add(JessProfile, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 180, 90));
         GroupScreen.add(jSeparator11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 380, 20));
 
+        jButton16.setText("Add more members");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+        GroupScreen.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 380, 60));
+
         BodyPart.add(GroupScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         HomeScreen.setVisible(false);
 
@@ -988,6 +1422,11 @@ public class Screen extends javax.swing.JFrame {
         jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
         jButton8.setToolTipText("");
         jButton8.setBorderPainted(false);
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
         jPanel2.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
 
         jPanel6.add(jPanel2);
@@ -1003,6 +1442,11 @@ public class Screen extends javax.swing.JFrame {
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-chevron_right 2.png"))); // NOI18N
         jButton9.setToolTipText("");
         jButton9.setBorderPainted(false);
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
         jPanel3.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 60, 60));
 
         jPanel6.add(jPanel3);
@@ -1129,67 +1573,6 @@ public class Screen extends javax.swing.JFrame {
         BodyPart.add(PurchaseScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         HomeScreen.setVisible(false);
 
-        Notifications.setBackground(new java.awt.Color(255, 255, 255));
-        Notifications.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel10.setLayout(new javax.swing.BoxLayout(jPanel10, javax.swing.BoxLayout.Y_AXIS));
-
-        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
-        jLabel14.setText("Jason added 6 pears onto the list!");
-        jPanel11.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jPanel10.add(jPanel11);
-        jPanel10.add(jSeparator3);
-
-        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
-        jLabel15.setText("Jason added 6 pears onto the list!");
-        jPanel12.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jPanel10.add(jPanel12);
-        jPanel10.add(jSeparator4);
-
-        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
-        jLabel16.setText("Jason added 6 pears onto the list!");
-        jPanel13.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jPanel10.add(jPanel13);
-        jPanel10.add(jSeparator5);
-
-        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
-        jLabel17.setText("Jason added 6 pears onto the list!");
-        jPanel14.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jPanel10.add(jPanel14);
-        jPanel10.add(jSeparator6);
-
-        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-person_male.png"))); // NOI18N
-        jLabel18.setText("Jason added 6 pears onto the list!");
-        jPanel15.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 60));
-
-        jPanel10.add(jPanel15);
-
-        jScrollPane3.setViewportView(jPanel10);
-
-        Notifications.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 380, 420));
-
-        BodyPart.add(Notifications, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
-        HomeScreen.setVisible(false);
-
         InputScreen.setBackground(new java.awt.Color(255, 255, 255));
         InputScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -1226,11 +1609,11 @@ public class Screen extends javax.swing.JFrame {
         SummaryScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel39.setText("Total Price");
-        SummaryScreen.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, -1));
+        SummaryScreen.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel8.setText("Split prices:");
-        SummaryScreen.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, 20));
+        SummaryScreen.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 20));
 
         jPanel26.setLayout(new javax.swing.BoxLayout(jPanel26, javax.swing.BoxLayout.Y_AXIS));
 
@@ -1283,7 +1666,7 @@ public class Screen extends javax.swing.JFrame {
 
         jScrollPane8.setViewportView(jPanel26);
 
-        SummaryScreen.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 360, 170));
+        SummaryScreen.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 360, 170));
 
         jTextField6.setEditable(false);
         jTextField6.setText("$18.64");
@@ -1293,7 +1676,7 @@ public class Screen extends javax.swing.JFrame {
                 jTextField6ActionPerformed(evt);
             }
         });
-        SummaryScreen.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 400, 90, 40));
+        SummaryScreen.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 90, 40));
 
         jButton6.setText("Close");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -1301,7 +1684,7 @@ public class Screen extends javax.swing.JFrame {
                 jButton6ActionPerformed(evt);
             }
         });
-        SummaryScreen.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 400, 180, 50));
+        SummaryScreen.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 180, 50));
 
         jPanel37.setLayout(new javax.swing.BoxLayout(jPanel37, javax.swing.BoxLayout.Y_AXIS));
 
@@ -1333,7 +1716,7 @@ public class Screen extends javax.swing.JFrame {
 
         jScrollPane9.setViewportView(jPanel37);
 
-        SummaryScreen.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 360, 90));
+        SummaryScreen.add(jScrollPane9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 360, 90));
 
         BodyPart.add(SummaryScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -1350,9 +1733,11 @@ public class Screen extends javax.swing.JFrame {
             this.BodyPart.getComponent(i).setVisible(false);
         }
         
+        ButtonNonActivation();
+        ButtonActivated("List");
         this.ListScreen.setVisible(true);
         this.HeaderLabel.setText("List");
-        this.ListButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-ingredients_list 2.png")));
+        ButtonActivated("List");
          this.BodyPart.repaint();
     }//GEN-LAST:event_ListButtonActionPerformed
 
@@ -1360,6 +1745,9 @@ public class Screen extends javax.swing.JFrame {
                for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
             this.BodyPart.getComponent(i).setVisible(false);
         }
+        ButtonNonActivation();
+        ButtonActivated("Home");
+        
        this.HomeScreen.setVisible(true);
        this.HeaderLabel.setText("Groshare");
         this.BodyPart.repaint();
@@ -1369,7 +1757,10 @@ public class Screen extends javax.swing.JFrame {
                for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
             this.BodyPart.getComponent(i).setVisible(false);
         }
-       this.PurchaseScreen.setVisible(true);
+               ButtonNonActivation();
+              ButtonActivated("Purchase");
+                  this.PurchaseScreen.setVisible(true);
+               
        this.HeaderLabel.setText("Purchases");
         this.BodyPart.repaint();
     }//GEN-LAST:event_PurchaseButtonActionPerformed
@@ -1378,6 +1769,8 @@ public class Screen extends javax.swing.JFrame {
                for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
             this.BodyPart.getComponent(i).setVisible(false);
         }
+               ButtonNonActivation();
+              ButtonActivated("Group");
        this.GroupScreen.setVisible(true);
        this.HeaderLabel.setText("My Group");
         this.BodyPart.repaint();
@@ -1387,6 +1780,9 @@ public class Screen extends javax.swing.JFrame {
                for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
             this.BodyPart.getComponent(i).setVisible(false);
         }
+        ButtonNonActivation();
+        ButtonActivated("Add");
+
        this.AddScreen.setVisible(true);
        this.HeaderLabel.setText("Add to list");
         this.jPanel34.setVisible(true);
@@ -1395,14 +1791,23 @@ public class Screen extends javax.swing.JFrame {
         this.BodyPart.repaint();
     }//GEN-LAST:event_AddButtonActionPerformed
 
-    private void NotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotificationActionPerformed
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
                      for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
             this.BodyPart.getComponent(i).setVisible(false);
         }
-       this.Notifications.setVisible(true);
-       this.HeaderLabel.setText("Notifications");
+                             ButtonNonActivation();
+        ButtonActivated("List");
+        
+        this.GeneratedList.removeAll();
+        this.GeneratedList.validate();
+        this.GeneratedList.repaint();
+                     
+       this.ListScreen.setVisible(true);
+       
+       this.HeaderLabel.setText("List");
+       this.BackButton.setVisible(false);
         this.BodyPart.repaint();
-    }//GEN-LAST:event_NotificationActionPerformed
+    }//GEN-LAST:event_BackButtonActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         List test = new List();
@@ -1425,6 +1830,7 @@ public class Screen extends javax.swing.JFrame {
 
         if (test.getItemCount() > 0) {
             this.InputScreen.setVisible(true);
+            this.BackButton.setVisible(true);
              this.HeaderLabel.setText("Input Prices");
             this.ListScreen.setVisible(false);
             for (int i = 0; i < test.getItemCount(); i++) {
@@ -1441,6 +1847,8 @@ public class Screen extends javax.swing.JFrame {
             }
         }
         
+     
+        
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1450,6 +1858,7 @@ public class Screen extends javax.swing.JFrame {
 
     private void JessProfileMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_JessProfileMouseClicked
         this.PopupJessDialog.setSize(360,370);
+        this.PopupJess.setVisible(true);
         this.PopupJessDialog.setVisible(true);
     }//GEN-LAST:event_JessProfileMouseClicked
 
@@ -1458,7 +1867,10 @@ public class Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void Notification1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification1ActionPerformed
-        // TODO add your handling code here:
+
+        this.PopupEdit.setSize(360, 350);
+        this.PopupApple3.setVisible(true);
+        this.PopupEdit.setVisible(true);
     }//GEN-LAST:event_Notification1ActionPerformed
 
     private void jCheckBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox3ActionPerformed
@@ -1467,7 +1879,10 @@ public class Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox3ActionPerformed
 
     private void Notification3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification3ActionPerformed
-        // TODO add your handling code here:
+       
+        this.PopupEdit.setSize(360, 350);
+        this.PopupApple3.setVisible(true);
+        this.PopupEdit.setVisible(true);
     }//GEN-LAST:event_Notification3ActionPerformed
 
     private void Notification5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Notification5ActionPerformed
@@ -1550,6 +1965,7 @@ public class Screen extends javax.swing.JFrame {
         this.GeneratedList.removeAll();
         this.GeneratedList.validate();
         this.GeneratedList.repaint();
+         this.BackButton.setVisible(false);
 
         for (int i = this.jPanel9.getComponentCount() - 1; i >= 0; i--) {
             JPanel innerPanel = (JPanel) this.jPanel9.getComponent(i);
@@ -1569,32 +1985,45 @@ public class Screen extends javax.swing.JFrame {
         //        this.jPanel4.repaint();
 
         this.calculatorTotal = 0.00;
+        
 
         this.InputScreen.setVisible(false);
         this.HeaderLabel.setText("November 7, 2019");
+                 ButtonNonActivation();
+        ButtonActivated("Purchase");
         this.SummaryScreen.setVisible(true);
+        
+        this.appleAdded = false;
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
         this.HomeScreen.setVisible(false);
+                 ButtonNonActivation();
+        ButtonActivated("Purchase");
         this.HeaderLabel.setText("Purchases");
         this.PurchaseScreen.setVisible(true);
     }//GEN-LAST:event_jPanel5MouseClicked
 
     private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
         this.SummaryScreen.setVisible(true);
+         ButtonNonActivation();
+        ButtonActivated("Purchase");
         this.HeaderLabel.setText("November 7, 2019");
         this.PurchaseScreen.setVisible(false);
     }//GEN-LAST:event_jButton17ActionPerformed
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
                this.HomeScreen.setVisible(false);
+                       ButtonNonActivation();
+        ButtonActivated("Purchase");
         this.HeaderLabel.setText("Purchases");
         this.PurchaseScreen.setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         this.SummaryScreen.setVisible(false);
+        ButtonNonActivation();
+        ButtonActivated("Purchase");
         this.HeaderLabel.setText("Purchases");
         this.PurchaseScreen.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
@@ -1616,6 +2045,8 @@ public class Screen extends javax.swing.JFrame {
         for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
            this.BodyPart.getComponent(i).setVisible(false);
         }
+        
+        
         
         javax.swing.JPanel jPanelTest;
         jPanelTest = new javax.swing.JPanel();
@@ -1648,19 +2079,20 @@ public class Screen extends javax.swing.JFrame {
         NotificationTest.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         NotificationTest.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         NotificationTest.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        NotificationTest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-            }
-        });
         jPanelTest.add(NotificationTest, java.awt.BorderLayout.LINE_END);
 
-        
+        if(!this.appleAdded){
         this.jPanel9.add(jPanelTest);
+        this.appleAdded = true;
         
+        }
+        
+       ButtonNonActivation();
+        ButtonActivated("List");
        this.ListScreen.setVisible(true);
        this.HeaderLabel.setText("List");
         this.BodyPart.repaint();
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void ExitProfile1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile1ActionPerformed
@@ -1675,6 +2107,8 @@ public class Screen extends javax.swing.JFrame {
                        for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
             this.BodyPart.getComponent(i).setVisible(false);
         }
+        ButtonNonActivation();
+        ButtonActivated("Add");
        this.AddScreen.setVisible(true);
        this.HeaderLabel.setText("Add to list");
         this.jPanel34.setVisible(true);
@@ -1682,6 +2116,142 @@ public class Screen extends javax.swing.JFrame {
 //        this.PopupApple.setVisible(false);
         this.BodyPart.repaint();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void NotificationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NotificationActionPerformed
+        this.Notifications.setVisible(true);
+        this.NotificationDialog.setSize(400, 475);
+        this.NotificationDialog.setVisible(true);
+        
+    }//GEN-LAST:event_NotificationActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+           for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+                   for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        this.NotificationDialog.setVisible(false);
+    for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+        
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void ExitProfile3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile3ActionPerformed
+        this.NotificationDialog.setVisible(false);
+    }//GEN-LAST:event_ExitProfile3ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+                this.NotificationDialog.setVisible(false);
+    for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+                this.NotificationDialog.setVisible(false);
+    for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+               this.NotificationDialog.setVisible(false);
+    for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+                this.NotificationDialog.setVisible(false);
+    for(int i = 0; i < this.BodyPart.getComponentCount(); i++) {
+            this.BodyPart.getComponent(i).setVisible(false);
+        }
+        ButtonNonActivation();
+        ButtonActivated("List");
+       this.ListScreen.setVisible(true);
+       this.HeaderLabel.setText("List");
+//        this.PopupApple.setVisible(false);
+        this.BodyPart.repaint();
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        this.jPanel4.setVisible(false);
+        this.PopupItem.setSize(360, 350);
+        this.PopupApple2.setVisible(true);
+        this.PopupItem.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void ExitProfile4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile4ActionPerformed
+        this.PopupItem.setVisible(false);
+    }//GEN-LAST:event_ExitProfile4ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        this.jPanel4.setVisible(true);
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void ExitProfile5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitProfile5ActionPerformed
+        this.PopupEdit.setVisible(false);
+    }//GEN-LAST:event_ExitProfile5ActionPerformed
+
+    private void jComboBox4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox4ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton19ActionPerformed
 
        private void jCheckBoxTestActionPerformed(java.awt.event.ActionEvent evt) {
          this.jButton4.setEnabled(true);
@@ -1719,6 +2289,7 @@ public class Screen extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Screen().setVisible(true);
+                
                
             }
         });
@@ -1728,9 +2299,13 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton AddButton;
     private javax.swing.JPanel AddScreen;
     private javax.swing.JPanel AppScreen;
+    private javax.swing.JButton BackButton;
     private javax.swing.JPanel BodyPart;
     private javax.swing.JButton ExitProfile1;
     private javax.swing.JButton ExitProfile2;
+    private javax.swing.JButton ExitProfile3;
+    private javax.swing.JButton ExitProfile4;
+    private javax.swing.JButton ExitProfile5;
     private javax.swing.JPanel GeneratedList;
     private javax.swing.JButton GroupButton;
     private javax.swing.JPanel GroupScreen;
@@ -1756,27 +2331,45 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JButton Notification7;
     private javax.swing.JButton Notification8;
     private javax.swing.JButton Notification9;
+    private javax.swing.JDialog NotificationDialog;
+    private javax.swing.JPanel NotificationScreen;
     private javax.swing.JPanel Notifications;
     private javax.swing.JPanel PopupApple1;
+    private javax.swing.JPanel PopupApple2;
+    private javax.swing.JPanel PopupApple3;
     private javax.swing.JDialog PopupAppleDialog;
+    private javax.swing.JDialog PopupEdit;
+    private javax.swing.JDialog PopupItem;
     private javax.swing.JPanel PopupJess;
     private javax.swing.JDialog PopupJessDialog;
     private javax.swing.JButton PurchaseButton;
     private javax.swing.JPanel PurchaseScreen;
     private javax.swing.JPanel SummaryScreen;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1790,6 +2383,8 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
@@ -1847,6 +2442,12 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel80;
+    private javax.swing.JLabel jLabel81;
+    private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
+    private javax.swing.JLabel jLabel85;
+    private javax.swing.JLabel jLabel86;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1877,8 +2478,12 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel40;
     private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
@@ -1897,6 +2502,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
+    private javax.swing.JSeparator jSeparator17;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -1906,9 +2512,12 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner jSpinner4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField6;
     // End of variables declaration//GEN-END:variables
