@@ -102,7 +102,7 @@ public class Screen extends javax.swing.JFrame {
          this.SummaryScreen.setVisible(false);
          this.InputScreen.setVisible(false);
                  this.HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-a_home 2.png")));
-        this.HomeButton.setForeground(new java.awt.Color(200, 200, 200));
+        this.HomeButton.setForeground(new java.awt.Color(152, 255, 152));
          this.HomeScreen.setVisible(true);
           this.BackButton.setVisible(false);
          
@@ -129,26 +129,26 @@ public class Screen extends javax.swing.JFrame {
     private void ButtonActivated(String screen) {
         if(screen.equals("Home")) {
                     this.HomeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-a_home 2.png")));
-        this.HomeButton.setForeground(new java.awt.Color(200, 200, 200));
+        this.HomeButton.setForeground(new java.awt.Color(152, 255, 152));
             
         }
         if(screen.equals("List")) {
         this.ListButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-ingredients_list 2.png")));
-        this.ListButton.setForeground(new java.awt.Color(200, 200, 200));
+        this.ListButton.setForeground(new java.awt.Color(152, 255, 152));
         }
          if(screen.equals("Add")) {
                      this.AddButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-plus.png")));
-        this.AddButton.setForeground(new java.awt.Color(200, 200, 200));
+        this.AddButton.setForeground(new java.awt.Color(152, 255, 152));
             
         }
         if(screen.equals("Purchase")) {
-        this.PurchaseButton.setForeground(new java.awt.Color(200, 200, 200));
+        this.PurchaseButton.setForeground(new java.awt.Color(152, 255, 152));
          this.PurchaseButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-money 2.png")));
             
         }
         if(screen.equals("Group")) {
          this.GroupButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-conference_call 2.png")));
-        this.GroupButton.setForeground(new java.awt.Color(200, 200, 200));
+        this.GroupButton.setForeground(new java.awt.Color(152, 255, 152));
         }
     }
 
@@ -2055,7 +2055,7 @@ public class Screen extends javax.swing.JFrame {
         javax.swing.JButton NotificationTest = new javax.swing.JButton();
         javax.swing.JCheckBox jCheckBoxTest = new javax.swing.JCheckBox();
         
-        jPanelTest.setBackground(new java.awt.Color(200, 200, 200));
+        jPanelTest.setBackground(new java.awt.Color(152, 255, 152));
         jPanelTest.setLayout(new java.awt.BorderLayout());
         
         
