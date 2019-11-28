@@ -1193,7 +1193,7 @@ public class Screen extends javax.swing.JFrame {
         ListScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton4.setBackground(new java.awt.Color(0, 153, 102));
-        jButton4.setText("Select items to checkout!");
+        jButton4.setText("Select items you've bought!");
         jButton4.setAutoscrolls(true);
         jButton4.setEnabled(false);
         jButton4.setFocusable(false);
