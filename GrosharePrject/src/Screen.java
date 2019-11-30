@@ -354,7 +354,6 @@ public class Screen extends javax.swing.JFrame {
         jLabel27 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         InputScreen = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
         GeneratedList = new javax.swing.JPanel();
         jTextField4 = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
@@ -1580,9 +1579,7 @@ public class Screen extends javax.swing.JFrame {
         InputScreen.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         GeneratedList.setLayout(new java.awt.GridLayout(0, 2));
-        jScrollPane6.setViewportView(GeneratedList);
-
-        InputScreen.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 360, 260));
+        InputScreen.add(GeneratedList, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 360, 280));
 
         jTextField4.setEditable(false);
         jTextField4.setText("$000.00");
@@ -1606,19 +1603,18 @@ public class Screen extends javax.swing.JFrame {
         InputScreen.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 180, 50));
 
         jPanel7.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 7));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setText("Please input each item's prices");
-        jPanel7.add(jLabel9);
+        jLabel9.setText("Please input the total price for each item");
+        jPanel7.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         jLabel26.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel26.setText("described on the receipt");
-        jPanel7.add(jLabel26);
+        jPanel7.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 32, -1, -1));
 
-        InputScreen.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 70));
+        InputScreen.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 60));
 
         BodyPart.add(InputScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -1854,7 +1850,7 @@ public class Screen extends javax.swing.JFrame {
             for (int i = 0; i < test.getItemCount(); i++) {
                 JSpinner spinner = new JSpinner(
                         new SpinnerNumberModel(current, min, max, step));
-                JComponent editor = new JSpinner.NumberEditor(spinner, "#0.00");
+                JComponent editor = new JSpinner.NumberEditor(spinner, "$#0.00");
                 spinner.setEditor(editor);
                 spinner.addChangeListener(this.makeABoi(i));
                 JLabel title = new JLabel(test.getItem(i));
@@ -2514,7 +2510,6 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JScrollPane jScrollPane8;
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JSeparator jSeparator1;
