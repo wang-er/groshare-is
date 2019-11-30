@@ -359,6 +359,9 @@ public class Screen extends javax.swing.JFrame {
         jTextField4 = new javax.swing.JTextField();
         jLabel37 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         SummaryScreen = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -1579,7 +1582,7 @@ public class Screen extends javax.swing.JFrame {
         GeneratedList.setLayout(new java.awt.GridLayout(0, 2));
         jScrollPane6.setViewportView(GeneratedList);
 
-        InputScreen.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 350));
+        InputScreen.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 360, 260));
 
         jTextField4.setEditable(false);
         jTextField4.setText("$000.00");
@@ -1601,6 +1604,21 @@ public class Screen extends javax.swing.JFrame {
             }
         });
         InputScreen.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 180, 50));
+
+        jPanel7.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel7.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 5, 7));
+
+        jLabel9.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Please input each item's prices");
+        jPanel7.add(jLabel9);
+
+        jLabel26.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("described on the receipt");
+        jPanel7.add(jLabel26);
+
+        InputScreen.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 360, 70));
 
         BodyPart.add(InputScreen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 440));
         ListScreen.setVisible(false);
@@ -2388,6 +2406,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -2448,6 +2467,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel85;
     private javax.swing.JLabel jLabel86;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -2486,6 +2506,7 @@ public class Screen extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel44;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
